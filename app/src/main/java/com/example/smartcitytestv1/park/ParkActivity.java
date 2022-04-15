@@ -2,12 +2,14 @@ package com.example.smartcitytestv1.park;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -22,21 +24,57 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 
 public class ParkActivity extends AppCompatActivity {
+
+    private Toolbar toolbar;
+
     private RecyclerView park_recycler;
     private List<Park> parkList;
     private List<Park> showParkList;
     private Button show_more;
+
+
+    //活动栏 的 事件监听 包括回退上一页
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                finish();
+                break;
+        }
+        return true;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_park);
 
+
+        toolbar = (Toolbar) findViewById(R.id.tool_Bar_park);
         park_recycler = (RecyclerView) findViewById(R.id.park_list);
         show_more = (Button) findViewById(R.id.show_more);
+
+        //添加回退按钮
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
+//            另一种回退按钮事件
+//        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                finish();
+//            }
+//        });
+
+
+
 
         getPark();
 
@@ -77,6 +115,10 @@ public class ParkActivity extends AppCompatActivity {
 //                    Log.d("TAG1", "getPark: "+new Park(id,parkName,vacancy,address,priceCaps,imgUrl,rates,distance,allPark,open));
                     parkList.add(new Park(id,parkName,vacancy,address,priceCaps,imgUrl,rates,distance,allPark,open));
                 }
+                parkList.sort((t1,t2)->{
+                    if(Integer.parseInt(t1.getDistance())>Integer.parseInt(t2.getDistance())) return 1;
+                    else return -1;
+                });
                 handler.sendEmptyMessage(1);
             } catch (IOException | JSONException e) {
                 e.printStackTrace();

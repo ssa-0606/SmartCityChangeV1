@@ -7,12 +7,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#C3C2C2"
-    tools:context=".MainActivity2">
+    tools:context=".park.ParkDetailActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tool_Bar_park_detail"
+        android:background="#EDB0B0"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="italic|bold"
+            android:text="停车场详情"/>
+
+    </androidx.appcompat.widget.Toolbar>
 
     <ImageView
         android:scaleType="center"
         android:layout_width="match_parent"
-        android:layout_height="170dp"
+        android:layout_height="0dp"
+        android:layout_weight="3"
         android:id="@+id/park_detail_img"/>
     <LinearLayout
         android:padding="10dp"
@@ -21,7 +38,8 @@
         android:layout_marginBottom="20dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="3">
 
         <TextView
             android:layout_width="match_parent"
@@ -73,7 +91,8 @@
         android:background="#FFFFFF"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="3">
 
         <LinearLayout
             android:paddingTop="10dp"
@@ -154,6 +173,12 @@
 
 
     </LinearLayout>
+
+<!--    没有实际作用，用来占位置-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
 
 

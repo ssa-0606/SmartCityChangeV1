@@ -1,11 +1,14 @@
 package com.example.smartcitytestv1.park;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -28,6 +31,18 @@ public class ParkDetailActivity extends AppCompatActivity {
     private TextView vacancies;
     private TextView ratesText;
 
+    private Toolbar toolbar;
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                finish();
+                break;
+        }
+        return true;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +55,13 @@ public class ParkDetailActivity extends AppCompatActivity {
         allParks = (TextView) findViewById(R.id.park_detail_total);
         vacancies = (TextView) findViewById(R.id.park_detail_vacancy);
         ratesText = (TextView) findViewById(R.id.park_detail_rates);
+
+        toolbar = (Toolbar) findViewById(R.id.tool_Bar_park_detail);
+        setSupportActionBar(toolbar);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setHomeButtonEnabled(true);
 
 
         Intent intent = getIntent();
