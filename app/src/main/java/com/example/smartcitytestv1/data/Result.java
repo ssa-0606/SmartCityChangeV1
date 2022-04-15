@@ -2,6 +2,7 @@ package com.example.smartcitytestv1.data;
 
 /**
  * 我修改了一下
+ * 我有修改了一下
  * A generic class that holds a result success w/ data or an error exception.
  */
 public class Result<T> {
