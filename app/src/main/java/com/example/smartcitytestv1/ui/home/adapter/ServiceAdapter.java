@@ -2,6 +2,7 @@ package com.example.smartcitytestv1.ui.home.adapter;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Intent;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.smartcitytestv1.MainActivity;
 import com.example.smartcitytestv1.R;
+import com.example.smartcitytestv1.park.ParkActivity;
 import com.example.smartcitytestv1.ui.home.beans.CityService;
 
 import java.util.List;
@@ -65,6 +67,9 @@ public class ServiceAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                 if(TextUtils.equals(service.getServiceName(),"全部服务")){
                     NavController navController = Navigation.findNavController(itemView);
                     navController.navigate(R.id.action_navigation_home_to_navigation_dashboard);
+                }else if(TextUtils.equals(service.getServiceName(),"停哪儿")){
+                    Intent intent = new Intent(itemView.getContext(), ParkActivity.class);
+                    itemView.getContext().startActivity(intent);
                 }
             }
         });

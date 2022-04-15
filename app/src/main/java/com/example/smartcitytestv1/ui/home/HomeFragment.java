@@ -45,7 +45,7 @@ import java.util.List;
 
 /**
  * 热门主题，未确定，暂时这么样
- * 这里我也修改了一下
+ *
  */
 
 public class HomeFragment extends Fragment {
@@ -147,7 +147,7 @@ public class HomeFragment extends Fragment {
                     int sort = data.getInt("sort");
                     serviceList.add(new CityService(id,serviceName,serviceType,"http://124.93.196.45:10001"+imgUrl,sort));
                 }
-                //排序
+                //排序  ,   这里修改了一下排序顺序  ，为了调试 “停哪儿” ， 记得修改回来
                 serviceList.sort(new Comparator<CityService>() {
                     @Override
                     public int compare(CityService cityService, CityService t1) {
@@ -155,7 +155,7 @@ public class HomeFragment extends Fragment {
                     }
                 });
                 serviceList.sort((cityService, t1) -> {
-                    if (cityService.getSort()<t1.getSort())
+                    if (cityService.getSort()>t1.getSort())
                         return 1;
                     else return -1;
                 });
