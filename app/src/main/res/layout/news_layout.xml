@@ -25,7 +25,6 @@
             android:ellipsize="end"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:text="hello"
             android:id="@+id/news_tit"/>
 
         <LinearLayout

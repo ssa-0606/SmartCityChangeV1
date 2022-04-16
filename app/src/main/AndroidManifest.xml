@@ -13,6 +13,10 @@
         android:theme="@style/Theme.SmartCityTestV1"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".park.ParkRecordActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="false" />
+        <activity
             android:name=".park.ParkDetailActivity"
             android:exported="false" />
         <activity
