@@ -13,9 +13,25 @@
         android:theme="@style/Theme.SmartCityTestV1"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".park.ParkRecordActivity"
-            android:windowSoftInputMode="adjustPan"
+            android:name=".ui.Person.activities.FeedBackActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui.Person.activities.ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Person.activities.UserInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.Person.activities.LogInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login" />
+        <activity
+            android:name=".park.ParkRecordActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".park.ParkDetailActivity"
             android:exported="false" />
