@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1085" />
         <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/drawable/my_input.xml" value="0.2065" />
+        <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/drawable/my_line.xml" value="0.2065" />
         <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/drawable/shape.xml" value="0.1395" />
         <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.2352744310575636" />
         <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/layout-w936dp/activity_login.xml" value="0.274609375" />
@@ -13,6 +14,9 @@
         <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/layout/activity_log_in.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/layout/activity_login.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/layout/activity_main.xml" value="0.16" />
+        <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/layout/activity_metro.xml" value="0.16" />
+        <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/layout/activity_metro_detail.xml" value="0.14" />
+        <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/layout/activity_metro_page.xml" value="0.18958333333333333" />
         <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/layout/activity_park.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/layout/activity_park_detail.xml" value="0.33" />
         <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/layout/activity_park_record.xml" value="0.36614583333333334" />
@@ -23,7 +27,10 @@
         <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/layout/fragment_notifications.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/layout/help_poor_fragment.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/layout/hot_layout.xml" value="0.24230072463768115" />
-        <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/layout/news_layout.xml" value="0.24230072463768115" />
+        <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/layout/lines_layout.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/layout/metro_layout.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/layout/metro_page_layout.xml" value="0.14" />
+        <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/layout/news_layout.xml" value="0.19" />
         <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/layout/park_layout.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/layout/park_record_layout.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/Mikasa/AndroidStudioProjects/SmartCityTestV1/app/src/main/res/layout/person_fragment.xml" value="0.36614583333333334" />

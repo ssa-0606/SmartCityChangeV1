@@ -13,6 +13,15 @@
         android:theme="@style/Theme.SmartCityTestV1"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".metro.MetroPageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".metro.MetroDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".metro.MetroActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.Person.activities.FeedBackActivity"
             android:exported="false" />
         <activity
