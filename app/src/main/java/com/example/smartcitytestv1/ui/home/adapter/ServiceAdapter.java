@@ -30,12 +30,10 @@ public class ServiceAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     private int resourceID;
     private List<CityService> serviceList;
     private RecyclerView.ViewHolder holder;
-    private Activity activity;
 
-    public ServiceAdapter(int resourceID, List<CityService> serviceList,Activity activity) {
+    public ServiceAdapter(int resourceID, List<CityService> serviceList) {
         this.resourceID = resourceID;
         this.serviceList = serviceList;
-        this.activity = activity;
     }
 
     @NonNull

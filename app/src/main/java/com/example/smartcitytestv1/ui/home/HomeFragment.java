@@ -229,7 +229,7 @@ public class HomeFragment extends Fragment {
                     }
                     showServiceList.add(new CityService(0,"全部服务","全部服务",null,0));
                     service_recycler.setLayoutManager(new GridLayoutManager(getContext(),5));
-                    service_recycler.setAdapter(new ServiceAdapter(R.layout.service_layout,showServiceList, mainActivity));
+                    service_recycler.setAdapter(new ServiceAdapter(R.layout.service_layout,showServiceList));
                     showServiceList = new ArrayList<>();
                     for (int i = 0; i < 2; i++) {
                         showServiceList.add(serviceList.get(i));
