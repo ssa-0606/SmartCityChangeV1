@@ -1,5 +1,6 @@
 package com.example.smartcitytestv1.city_acitivity.adapter;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,10 +8,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.smartcitytestv1.R;
+import com.example.smartcitytestv1.city_acitivity.DetailActivity;
 import com.example.smartcitytestv1.city_acitivity.beans.ActivityItem;
 
 import java.util.List;
@@ -48,6 +51,13 @@ public class ActivityAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         Glide.with(itemView).load("http://124.93.196.45:10001"+activityItem.getImgUrl()).into(imageView);
         sign.setText("已报名"+activityItem.getSignupNum()+"人");
         publish.setText(activityItem.getPublishTime());
+
+        CardView cardView = itemView.findViewById(R.id.activity_card);
+        cardView.setOnClickListener(view -> {
+            Intent intent = new Intent(itemView.getContext(), DetailActivity.class);
+            intent.putExtra("id",activityItem.getId());
+            itemView.getContext().startActivity(intent);
+        });
 
     }
 

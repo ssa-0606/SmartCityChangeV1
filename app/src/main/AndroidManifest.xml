@@ -13,6 +13,9 @@
         android:theme="@style/Theme.SmartCityTestV1"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".city_acitivity.DetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".city_acitivity.CityActivityActivity"
             android:exported="false" />
         <activity
