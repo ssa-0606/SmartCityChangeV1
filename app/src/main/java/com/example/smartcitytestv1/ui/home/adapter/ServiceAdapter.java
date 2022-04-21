@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.smartcitytestv1.MainActivity;
 import com.example.smartcitytestv1.R;
+import com.example.smartcitytestv1.city_acitivity.CityActivityActivity;
 import com.example.smartcitytestv1.metro.MetroActivity;
 import com.example.smartcitytestv1.park.ParkActivity;
 import com.example.smartcitytestv1.ui.home.beans.CityService;
@@ -71,6 +72,9 @@ public class ServiceAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                     itemView.getContext().startActivity(intent);
                 }else if(TextUtils.equals(service.getServiceName(),"城市地铁")){
                     Intent intent = new Intent(itemView.getContext(), MetroActivity.class);
+                    itemView.getContext().startActivity(intent);
+                }else if(TextUtils.equals(service.getServiceName(),"活动管理")){
+                    Intent intent = new Intent(itemView.getContext(), CityActivityActivity.class);
                     itemView.getContext().startActivity(intent);
                 }
             }
