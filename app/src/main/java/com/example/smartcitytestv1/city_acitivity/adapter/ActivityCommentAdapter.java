@@ -45,7 +45,11 @@ public class ActivityCommentAdapter extends RecyclerView.Adapter<RecyclerView.Vi
         TextView nick = itemView.findViewById(R.id.comment_nick);
         TextView content = itemView.findViewById(R.id.comment_content);
         TextView time = itemView.findViewById(R.id.comment_time);
-        Glide.with(itemView).load(commentUser.getAvatar()).into(imageView);
+        if(commentUser.getAvatar().contains("http")){
+            Glide.with(itemView).load(commentUser.getAvatar()).into(imageView);
+        }else{
+            Glide.with(itemView).load("http://124.93.196.45:10001"+commentUser.getAvatar()).into(imageView);
+        }
         nick.setText(commentUser.getNickName());
         content.setText(commentUser.getContent());
         time.setText(commentUser.getCommentTime());

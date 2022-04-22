@@ -38,9 +38,11 @@
                 <WebView
                     android:autoLink="all"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:id="@+id/activity_detail_content"/>
                 <LinearLayout
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -52,7 +54,6 @@
                         android:background="@drawable/shape"
                         android:paddingStart="20dp"
                         android:hint="发一条友善的评论"
-                        android:focusable="false"
                         android:id="@+id/activity_comment"/>
                     <Button
                         android:layout_width="0dp"
@@ -70,8 +71,23 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/activity_comment_list"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="其他活动推荐"
+            android:layout_margin="10dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_record"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_sign_up"/>
 
         </LinearLayout>
 
